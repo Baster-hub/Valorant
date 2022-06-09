@@ -1,0 +1,60 @@
+.arrow-container {
+    position: relative;
+    height: 150px;
+    width: 130px;
+	margin-left: 3.2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all .5s ease-in-out;
+}
+
+.arrow-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #1f2326;
+    -webkit-clip-path: polygon(0 0.5rem, 0 100%, 100% 100%, 100% 0, 0.5rem 0);
+    /* display: none; */
+}
+
+.arrow-container::before {
+    content: "";
+    position: absolute;
+    top: 0.1rem;
+    left: 0.1rem;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: white;
+    -webkit-clip-path: polygon(
+        0 0.45rem,
+        0 calc(100% - 0.2rem),
+        calc(100% - 0.2rem) calc(100% - 0.2rem),
+        calc(100% - 0.2rem) 0,
+        0.45rem 0
+    );
+	transition: all .5s ease-in-out;
+    /* display: none; */
+}
+
+.arrow {
+	transition: all .5s ease-in-out;
+    color: #1f2326;
+    font-size: 2rem;
+	z-index: 3;
+}
+
+.arrow-container:hover::before {
+	background-color: transparent;
+}
+
+.arrow-container:hover .arrow{
+	color: white
+}
+
+

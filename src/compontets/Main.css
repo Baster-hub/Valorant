@@ -1,0 +1,73 @@
+@font-face {font-family: "Druk Wide Bold";
+  src: url("../fonts/Druk_Wide/@font-face/2206d6cc490084998d531e8c1b2cbb4a.eot"); /* IE9*/
+  src: url("../fonts/Druk_Wide/@font-face/2206d6cc490084998d531e8c1b2cbb4a.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("../fonts/Druk_Wide/@font-face/2206d6cc490084998d531e8c1b2cbb4a.woff2") format("woff2"), /* chrome、firefox */
+  url("../fonts/Druk_Wide/@font-face/2206d6cc490084998d531e8c1b2cbb4a.woff") format("woff"), /* chrome、firefox */
+  url("../fonts/Druk_Wide/@font-face/2206d6cc490084998d531e8c1b2cbb4a.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("../fonts/Druk_Wide/@font-face/2206d6cc490084998d531e8c1b2cbb4a.svg#Druk Wide Bold") format("svg"); /* iOS 4.1- */
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+main {
+	font-size: 18px;
+	z-index: -40;
+    width: 100%;
+	height: 870px;
+	margin-top: 4rem;
+	padding-top: 3rem;
+	padding-left: 5rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-image: url("../img/background.png");
+	background-color: #ff4656;
+	display: flex;
+	justify-content: center;
+}
+
+.agents-title {
+	position: relative;
+	width: 12rem;
+	height: 39rem;
+}
+
+.agents-title img {
+	position: absolute;
+	bottom: 0;
+	width: 80%;
+}
+
+.agents-title h1 {
+	position: absolute;
+	right: 0;
+}
+
+h1 {
+	color: transparent;
+	-webkit-text-stroke: .7px white;
+	writing-mode: tb-rl;
+  	text-orientation: mixed;
+	font-family: "Druk Wide Bold";
+	font-size: 5.3em;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+
+
+h2 {
+	font-family: "Druk Wide Bold";
+}
+
+.hero_container {
+	display: flex;
+	margin-left: 3rem;
+	overflow: hidden;
+	padding-bottom: 2rem;
+	padding-right: 2rem;
+}

@@ -1,0 +1,99 @@
+:root {
+	--transition-main: all .5s ease-in-out
+}
+
+.hero {
+	height: 600px;
+	padding-top: 1rem;
+	margin-left: 4rem;
+	list-style: none;
+	position: relative;
+	overflow: visible;
+	z-index: 1;
+	transition: var(--transition-main);
+	padding-right: .1rem;
+}
+
+.hero::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -50;
+	width: 100%;
+	height: 100%;
+	background-color: #1F2326;
+	-webkit-clip-path: polygon(0 .5rem, 0 100%, 100% 100%, 100% 0, .5rem 0);
+}
+
+.hero::before {
+	content: '';
+	position: absolute;
+	top: .1rem;
+	left: .1rem;
+	z-index: -40;
+	width: 100%;
+	height: 100%;
+	background-color: #1F2326;
+	-webkit-clip-path: polygon(0 .45rem, 0 calc(100% - .2rem), calc(100% - .2rem) calc(100% - .2rem), calc(100% - .2rem) 0, .45rem 0);
+	transition: var(--transition-main);
+}
+
+.hero:hover .hero-info .hero-name{
+	-webkit-text-stroke: 1.4px #1F2326;
+}
+
+.hero:hover::before {
+	background-color: white;
+}
+
+.hero:hover .abilities {
+	background-color: white;
+	border: 2px solid #1F2326;
+}
+
+.hero:hover .abilities li img {
+	filter: brightness(0) saturate(100%) invert(9%) sepia(25%) saturate(312%) hue-rotate(163deg) brightness(94%) contrast(90%);
+}
+
+.hero img {
+	height: 100%;
+}
+
+.hero-info {
+	top: 2rem;
+	left: -1.5em;
+	position: absolute;
+	display: flex;
+}
+
+.hero-name {
+	font-size: 2.5em;
+	transition: var(--transition-main);
+}
+
+.hero-country {
+	writing-mode: tb-rl;
+  	text-orientation: mixed;
+	color: #ff4656;
+	font-size: .8em;
+}
+
+.abilities {
+	border: 1.5px solid white;
+	position: absolute;
+	bottom: -1rem;
+	right: -1rem;
+	width: 100%;
+	height: 10%;
+	display: flex;
+	background-color: #1F2326;
+	justify-content: space-around;
+	align-items: center;
+	list-style: none;
+	transition: var(--transition-main);
+}
+
+.abilities li img{
+	-webkit-transform: scale(0.6);
+}
